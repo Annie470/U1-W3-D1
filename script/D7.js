@@ -221,10 +221,28 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+let filmPiuVecchio = null;
+const trovaFilmVecchio = () => {
+  movies.forEach((film) => {
+    if (filmPiuVecchio === null || film.Year < filmPiuVecchio.Year) {
+      filmPiuVecchio = film;
+    }
+  });
+  return filmPiuVecchio;
+};
+console.log(trovaFilmVecchio());
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+const quantiFilm = () => {
+  let i = 0;
+  movies.forEach(() => {
+    i++;
+  });
+  return i;
+};
+console.log(quantiFilm());
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti 
@@ -239,11 +257,13 @@ const listaTitoli = () => {
 console.log(listaTitoli());
 
 /* ESERCIZIO 12 (filter)
-  Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
+  Scrivi una funzione per ottenere dall'array fornito solamente i film
+   usciti nel millennio corrente.
 */
 
 /* ESERCIZIO 13 (reduce)
-  Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
+  Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti
+   i film contenuti nell'array fornito.
 */
 
 /* ESERCIZIO 14 (find)
