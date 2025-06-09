@@ -100,6 +100,7 @@ const getOddArray = () => {
   return oddNum;
 };
 console.log(getOddArray());
+
 /* Questo array di film verrà usato negli esercizi a seguire.
  Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -226,8 +227,16 @@ const movies = [
 */
 
 /* ESERCIZIO 11 (map)
-  Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
+  Scrivi una funzione per creare un array con solamente i titoli dei film contenuti 
+  nell'array fornito.
 */
+const listaTitoli = () => {
+  const arrFilm = movies.map((film) => {
+    return film.Title;
+  });
+  return arrFilm;
+};
+console.log(listaTitoli());
 
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
