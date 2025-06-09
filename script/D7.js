@@ -260,6 +260,14 @@ console.log(listaTitoli());
   Scrivi una funzione per ottenere dall'array fornito solamente i film
    usciti nel millennio corrente.
 */
+const filmNuovi = movies.filter((film) => {
+  if (film.Year <= "2000") {
+    return false;
+  } else {
+    return true;
+  }
+});
+console.log(filmNuovi);
 
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti
@@ -267,9 +275,16 @@ console.log(listaTitoli());
 */
 
 /* ESERCIZIO 14 (find)
-  Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
+  Scrivi una funzione per ottenere dall'array fornito uno specifico film
+   (la funzione riceve un imdbID come parametro).
 */
+const trovaFilm = (imdbID) => {
+  const filmTrovato = movies.find((film) => film.imdbID === imdbID);
+  return filmTrovato;
+};
+console.log(trovaFilm("tt0848228"));
 
 /* ESERCIZIO 15 (findIndex)
-  Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
+  Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito 
+  nell'anno fornito come parametro.
 */
