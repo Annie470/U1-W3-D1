@@ -90,8 +90,18 @@ console.log(letterToNum());
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
-
-/* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
+const oddNum = [];
+const getOddArray = () => {
+  for (let i = 0; i < 99; i++) {
+    if (i % 2 !== 0) {
+      oddNum.push(i);
+    }
+  }
+  return oddNum;
+};
+console.log(getOddArray());
+/* Questo array di film verrà usato negli esercizi a seguire.
+ Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
   {
     Title: "The Lord of the Rings: The Fellowship of the Ring",
