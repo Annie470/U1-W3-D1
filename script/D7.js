@@ -70,9 +70,22 @@ const newArr = (n) => {
 console.log(newArr(2));
 
 /* ESERCIZIO 7 (map)
-  Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
+  Scrivi una funzione che, dato un array di stringhe, 
+  ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array
+   di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+const arrString = [
+  "Gianfrancioschio",
+  "è",
+  "fantasmagoricamente",
+  "fantasmagorico",
+];
+const letterToNum = () => {
+  const lunghezza = arrString.map((stringa) => stringa.length);
+  return lunghezza;
+};
+console.log(letterToNum());
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
