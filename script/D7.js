@@ -55,6 +55,15 @@ console.log(getAnotherArray());
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+const numerini = [3, 5, 2];
+const sommiamoNumerini = () => {
+  let somma = 0;
+  let numero = numerini.reduce((somma, num) => {
+    return somma + num;
+  });
+  return numero;
+};
+console.log(sommiamoNumerini());
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri,
