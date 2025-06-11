@@ -282,6 +282,13 @@ console.log(filmNuovi);
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti
    i film contenuti nell'array fornito.
 */
+const sommaAnnoFilm = () => {
+  let anniTot = movies.reduce((acc, curr) => {
+    return acc + parseInt(curr.Year);
+  }, 0);
+  return anniTot;
+};
+console.log(sommaAnnoFilm());
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film
@@ -297,3 +304,8 @@ console.log(trovaFilm("tt0848228"));
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito 
   nell'anno fornito come parametro.
 */
+const getIndexByYear = function (array, year) {
+  const index = movies.findIndex((elem) => parseInt(elem.Year) === year);
+  return index;
+};
+console.log(getIndexByYear(movies, 2012));
